@@ -83,6 +83,10 @@ equityLoss = equity - equityZero;
             end
         end
         
+        if Ei >= Aei
+            cav = 0;
+        end
+        
     end
 
 end
