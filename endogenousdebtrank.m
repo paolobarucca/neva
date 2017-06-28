@@ -65,7 +65,7 @@ equityLoss = equity - equityZero;
     end
 
     function rho = endogenousRecoveryFun(Ei, Aei, li)
-        rho = max(1 + Ei/li,0)*( probDefFun(Ei, Aei, li) -  probDefFun(Ei+li, Aei, li)) + (1/(2*li)*condAverageFun(Ei, Aei, li));
+        rho = max(1 + Ei/li,0)*( probDefFun(Ei, Aei, li) -  probDefFun(Ei+li, Aei, li)) + (Aei/(2*li)*condAverageFun(Ei, Aei, li));
     end
 
     function cav = condAverageFun(Ei, Aei, li)
